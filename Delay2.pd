@@ -1,0 +1,19 @@
+#N canvas -8 0 958 956 12;
+#X obj 53 288 inlet~;
+#X obj 315 345 *~ 0.5;
+#X obj 439 448 delwrite~ dlay 2500;
+#X obj 60 486 delread~ dlay 1000;
+#X obj 62 568 outlet~;
+#X obj 100 100 cnv 15 70 150 empty empty Delay 20 12 0 14 #73d1ff #404040
+0;
+#X obj 140 140 vsl 15 100 0 0.75 0 0 empty del_feed Fdbck 0 -9 0 8
+#c6ffc7 #000000 #000000 0 1;
+#X obj 112 140 vsl 15 100 0 1000 0 0 empty del_time Time 0 -9 0 8 #e3c6ff
+#000000 #000000 0 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 0 4 0;
+#X connect 6 0 1 1;
+#X connect 7 0 3 0;
+#X coords 0 -1 1 1 70 150 1 100 100;

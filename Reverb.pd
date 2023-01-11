@@ -1,0 +1,27 @@
+#N canvas -8 0 958 956 12;
+#X obj 173 280 inlet~;
+#X obj 173 453 rev1~;
+#X obj 86 460 *~;
+#X obj 116 540 +~;
+#X obj 175 510 *~;
+#X obj 110 621 outlet~;
+#X obj 100 100 cnv 15 100 150 empty empty Reverb 5 10 0 14 #ffb18c
+#404040 0;
+#X obj 173 133 vsl 15 100 0 50 0 0 empty time Time 0 -9 0 8 #c6ffc7
+#000000 #000000 0 1;
+#X obj 113 133 vsl 15 100 0 1 0 0 empty dry Dry 0 -9 0 10 #ffe3c6 #000000
+#000000 0 1;
+#X obj 144 133 vsl 15 100 0 1 0 0 empty wet Wet 0 -9 0 10 #ffe3c6 #000000
+#000000 0 1;
+#X text 253 109 Time : Lenght of the reverb Dry : amount of dry Wet
+: Amount of wet;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 7 0 1 1;
+#X connect 8 0 2 1;
+#X connect 9 0 4 1;
+#X coords 0 -1 1 1 100 150 1 100 100;

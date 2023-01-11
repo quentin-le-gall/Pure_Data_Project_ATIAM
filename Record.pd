@@ -1,0 +1,24 @@
+#N canvas 134 61 1920 966 12;
+#X obj 100 100 cnv 15 85 80 empty empty Record 20 12 0 14 #ffc7c6 #404040
+0;
+#X obj 110 143 bng 25 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 149 144 bng 25 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 103 124 Start;
+#X text 147 122 Stop;
+#X obj 346 219 trigger bang bang;
+#X obj 273 489 writesf~;
+#X obj 322 127 inlet~;
+#X msg 121 264 stop;
+#X msg 336 256 start;
+#X msg 520 384 open ./Data/rec_1.wav;
+#X connect 1 0 5 0;
+#X connect 2 0 8 0;
+#X connect 5 0 9 0;
+#X connect 5 1 10 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X coords 0 -1 1 1 85 80 1 100 100;

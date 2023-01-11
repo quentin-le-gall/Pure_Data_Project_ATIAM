@@ -1,0 +1,16 @@
+#N canvas 952 0 958 956 12;
+#X obj 100 100 cnv 15 100 100 empty empty Input 20 12 0 14 #ff8300
+#404040 0;
+#X obj 169 124 vsl 15 60 0.1 1 0 0 empty gain_in Gain 0 -9 0 8 #ffc7c6
+#000000 #000000 0 1;
+#X obj 148 371 *~;
+#X text 108 256 Input 3;
+#X floatatom 117 158 5 0 0 0 - channel_in - 0;
+#X text 115 142 Chnl;
+#X obj 149 434 outlet~;
+#X obj 113 274 adc~ 1;
+#X connect 1 0 2 1;
+#X connect 2 0 6 0;
+#X connect 4 0 7 0;
+#X connect 7 0 2 0;
+#X coords 0 -1 1 1 100 100 1 100 100;

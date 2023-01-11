@@ -1,0 +1,94 @@
+#N canvas 93 -15 1920 966 12;
+#X obj 353 663 dac~;
+#X obj 459 651 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 459 704 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 459 678 metro 100;
+#X obj 395 618 *~;
+#X obj 335 618 *~;
+#X obj 460 732 tabwrite~ Osc_R;
+#X obj 218 651 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 218 704 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 218 678 metro 100;
+#X obj 219 732 tabwrite~ Osc_L;
+#X obj 346 44 r toLVU;
+#X obj 395 68 r toRVU;
+#X obj 335 732 s toLVU;
+#X obj 396 732 s toRVU;
+#X obj 335 687 env~;
+#X obj 335 709 - 100;
+#X obj 396 686 env~;
+#X obj 396 708 - 100;
+#X obj 395 470 *~ 1;
+#X obj 335 470 *~ 1;
+#X obj 100 100 cnv 15 575 200 empty empty Master 20 12 0 14 #ffc7c6
+#404040 0;
+#X obj 656 103 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array Osc_L 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 117 136 graph;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array Osc_R 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 459 136 graph;
+#X obj 317 138 vsl 15 135 0 1 0 0 empty left_vol empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 444 138 vsl 15 135 0 1 0 0 empty right_vol empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 396 146 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+;
+#X obj 347 146 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+;
+#X obj 334 394 inlet~;
+#X obj 395 395 inlet~;
+#X obj 317 105 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 445 104 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 575 102 Visu On/Off;
+#X text 236 104 Left On/Off;
+#X text 357 103 Right On/Off;
+#X text 3 2 A master patch to visualise signal and control right and
+left volume;
+#X connect 1 0 3 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 1;
+#X connect 4 0 6 0;
+#X connect 4 0 17 0;
+#X connect 5 0 0 0;
+#X connect 5 0 10 0;
+#X connect 5 0 15 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 11 0 28 0;
+#X connect 12 0 27 0;
+#X connect 15 0 16 0;
+#X connect 16 0 13 0;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
+#X connect 19 0 4 0;
+#X connect 20 0 5 0;
+#X connect 22 0 9 0;
+#X connect 22 0 3 0;
+#X connect 25 0 31 0;
+#X connect 26 0 32 0;
+#X connect 29 0 20 0;
+#X connect 30 0 19 0;
+#X connect 31 0 5 1;
+#X connect 32 0 4 1;
+#X coords 0 -1 1 1 575 190 1 100 100;

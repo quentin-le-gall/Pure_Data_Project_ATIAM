@@ -1,0 +1,21 @@
+#N canvas -8 0 969 956 12;
+#X obj 52 299 inlet~;
+#X obj 105 353 osc~;
+#X obj 121 408 *~;
+#X obj 51 466 *~;
+#X obj 52 548 outlet~, f 8;
+#X text 52 282 Signal;
+#X obj 100 100 cnv 15 72 127 empty empty AM 20 12 0 14 #feffc6 #404040
+0;
+#X obj 110 135 vsl 15 70 0.1 10 0 0 empty am_speed Speed 0 -9 0 8 #ffe3c6
+#000000 #000000 0 1;
+#X obj 140 135 vsl 15 70 0.1 1 0 0 empty am_gain Gain 0 -9 0 10 #ffc7c6
+#000000 #000000 0 1;
+#X text 59 71 Amplitude Modulation;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 1;
+#X coords 0 -1 1 1 70 125 1 100 100;
